@@ -1,0 +1,62 @@
+
+<div>
+  <mat-grid-list cols="3">
+          <mat-grid-tile></mat-grid-tile>
+      
+          <mat-grid-tile class='login-element'>
+              <div class="login-container">
+      
+                  <div class="login-box-header">
+                     <span>Login</span>
+                     <mat-icon style=" position: absolute;right:50px;font-size: 50px;">lock</mat-icon> 
+                     <br>
+                     <span style="font-size: 60%;">Let's start my work</span>
+      
+                      
+                  </div>
+                  <div class="login-box-body">
+      
+                      <!-- Markup for getting Username starts -->
+                      <mat-grid-list cols="9" rowHeight="75px">
+                          <mat-grid-tile [rowspan]="1" class="login-icon">
+                              <mat-icon>lock</mat-icon>
+                          </mat-grid-tile>
+                          <mat-grid-tile [colspan]="7">
+                              <mat-input-container class="justifier">
+                                  <input matInput placeholder="Username" text="text" required>
+                              </mat-input-container>
+                          </mat-grid-tile>
+                      </mat-grid-list>
+                      <!-- Markup for getting Username ends -->
+      
+                      <!-- Markup for getting Password starts -->
+                      <mat-grid-list cols="9" rowHeight="100px">
+                          <mat-grid-tile [rowspan]="1"  class="login-icon">
+                              <mat-icon>remove_red_eye</mat-icon>
+                          </mat-grid-tile>
+                          <mat-grid-tile [colspan]="7">
+                              <mat-input-container class="justifier">
+                                  <input matInput placeholder="Password" text="password">
+                              </mat-input-container>
+                          </mat-grid-tile>
+                      </mat-grid-list>
+                      <!-- Markup for getting Password ends -->
+      
+                      <button mat-raised-button class="login-button"> 
+                          <!-- <mat-icon>input</mat-icon>  -->
+                          Login
+                      </button>
+      <a href="#" style="position: absolute;margin-top: 10px;">Forgot password ?</a>
+      <a href="#" [routerLink]="['/pages/register']" style="right: 30px;position: absolute;margin-top: 10px;">Don't have account ? Register here.</a>
+
+                  </div>
+                  <!-- Template Body ends -->
+                  
+              </div>
+          </mat-grid-tile>
+          <!-- Writing markup for login ends -->
+          <mat-grid-tile></mat-grid-tile>
+      
+      </mat-grid-list>
+</div>
+

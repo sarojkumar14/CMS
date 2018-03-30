@@ -1,0 +1,130 @@
+
+.app-header{
+	color: #fff;
+    background-color: #e91e63;
+    text-align: center;
+    padding: 1%;
+	-webkit-box-shadow: 2px 4px 58px -20px rgba(0,0,0,1);
+	-moz-box-shadow: 2px 4px 58px -20px rgba(0,0,0,1);
+	box-shadow: 2px 4px 58px -20px rgba(0,0,0,1);
+}
+.login-container{
+	width: 100%;
+  	height:510px;
+  	padding: 0% !important;
+	background-color: #fff;
+	-webkit-box-shadow: 2px 4px 58px -20px rgba(0,0,0,1);
+	-moz-box-shadow: 2px 4px 58px -20px rgba(0,0,0,1);
+	box-shadow: 2px 4px 58px -20px rgba(0,0,0,1);
+}
+ 
+.login-box-header{  
+	width: auto;
+    /* height: 20%; */
+    background-color: #3f51b5;
+    /* text-align: center; */
+    vertical-align: middle;
+    font-size: 150%;
+    padding: 2%;
+    color: #fff;
+}
+ 
+.login-box-body{
+	width: auto;
+	height:100%;
+	padding: 5% 5% 5% 5%;
+	color: #d2d2d2;
+}
+ 
+.login-icon{
+	margin-top: -2px;
+}
+ 
+.justifier {
+	width: 100%;
+	padding-bottom: 2%;
+}
+ 
+.login-button{
+	width: 100%;
+	padding:1.5% !important;	
+    background-color: #3f51b5 	;
+    font-size: 1.5em;
+    color: #fff !important;
+}
+
+<div>
+        <mat-grid-list cols="3" style="padding-bottom: 0px;">
+                <mat-grid-tile></mat-grid-tile>
+            
+                <mat-grid-tile class='login-element'>
+                    <div class="login-container">
+            
+                        <div class="login-box-header">
+                           <span>Register</span>
+                           <mat-icon style=" position: absolute;right:50px;font-size: 50px;">account_box</mat-icon> 
+                           <br>
+                           <span style="font-size: 60%;">Join with your community</span>
+            
+                            
+                        </div>
+                        <div class="login-box-body">
+            
+                            <!-- Markup for getting Username starts -->
+                            <mat-grid-list cols="9" rowHeight="75px">
+                                <mat-grid-tile [rowspan]="1" class="login-icon">
+                                    <mat-icon>lock</mat-icon>
+                                </mat-grid-tile>
+                                <mat-grid-tile [colspan]="7">
+                                    <mat-input-container class="justifier">
+                                        <input matInput placeholder="Username" text="text">
+                                    </mat-input-container>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                            <!-- Markup for getting Username ends -->
+            
+                            <!-- Markup for getting Password starts -->
+                            <mat-grid-list cols="9" rowHeight="100px">
+                                <mat-grid-tile [rowspan]="1"  class="login-icon">
+                                    <mat-icon>remove_red_eye</mat-icon>
+                                </mat-grid-tile>
+                                <mat-grid-tile [colspan]="7">
+                                    <mat-input-container class="justifier">
+                                        <input matInput placeholder="Password" text="password">
+                                    </mat-input-container>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                            <!-- Markup for getting Password ends -->
+
+                             <!-- Markup for getting Confirm Password starts -->
+                             <mat-grid-list cols="9" rowHeight="100px">
+                                    <mat-grid-tile [rowspan]="1"  class="login-icon">
+                                        <mat-icon>remove_red_eye</mat-icon>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile [colspan]="7">
+                                        <mat-input-container class="justifier">
+                                            <input matInput placeholder="Confirm Password" text="confirm password">
+                                        </mat-input-container>
+                                    </mat-grid-tile>
+                                </mat-grid-list>
+                                <!-- Markup for getting Confirm Password ends -->
+            
+                            <button mat-raised-button class="login-button"> 
+                                <!-- <mat-icon>input</mat-icon>  -->
+                                Register
+                            </button>
+
+                            <a href="#" style="position: absolute;margin-top: 10px;">Go back?</a>
+                            <a href="#" [routerLink]="['/pages/login']" style="right: 30px;position: absolute;margin-top: 10px;">Allready have account ? Login here.</a>
+            
+                        </div>
+                        <!-- Template Body ends -->
+                        
+                    </div>
+                </mat-grid-tile>
+                <!-- Writing markup for login ends -->
+                <mat-grid-tile></mat-grid-tile>
+            
+            </mat-grid-list>
+</div>
+
