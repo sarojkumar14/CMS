@@ -1,6 +1,6 @@
 
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { P404Component } from './404.component';
 import { P500Component } from './500.component';
 import { LoginComponent } from './login.component';
@@ -44,7 +44,9 @@ import {
 
 
 @NgModule({
-  imports: [PagesRoutingModule,
+  imports: [
+    FormsModule, ReactiveFormsModule,
+    PagesRoutingModule,
     MatSidenavModule,
     MatButtonModule,
     MatMenuModule,

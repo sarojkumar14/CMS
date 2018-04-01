@@ -5,7 +5,8 @@ import {
   ActivatedRouteSnapshot,
   CanActivate,
   Router,
-  RouterStateSnapshot
+  RouterStateSnapshot,
+  CanActivateChild 
 } from '@angular/router';
 
 import { AuthService } from '../_services/index';
@@ -27,7 +28,7 @@ export class AuthGuard implements CanActivate {
       .take(1)
       .map((isLoggedIn: boolean) => {
         if (!isLoggedIn) {
-          this.router.navigate(['/']);
+          this.router.navigate(['./pages/login']);
           return false;
         }
         return true;

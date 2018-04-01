@@ -23,7 +23,7 @@
                           </mat-grid-tile>
                           <mat-grid-tile [colspan]="7">
                               <mat-input-container class="justifier">
-                                  <input matInput placeholder="Username" text="text" required>
+                                  <input matInput placeholder="Username" [(ngModel)]="login.username" text="text" required>
                               </mat-input-container>
                           </mat-grid-tile>
                       </mat-grid-list>
@@ -36,13 +36,13 @@
                           </mat-grid-tile>
                           <mat-grid-tile [colspan]="7">
                               <mat-input-container class="justifier">
-                                  <input matInput placeholder="Password" text="password">
+                                  <input matInput placeholder="Password" [(ngModel)]="login.password" text="password">
                               </mat-input-container>
                           </mat-grid-tile>
                       </mat-grid-list>
                       <!-- Markup for getting Password ends -->
       
-                      <button mat-raised-button class="login-button"> 
+                      <button mat-raised-button class="login-button" (click)="onLogin()"> 
                           <!-- <mat-icon>input</mat-icon>  -->
                           Login
                       </button>

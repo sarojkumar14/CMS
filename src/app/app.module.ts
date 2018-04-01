@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CdkTableModule } from '@angular/cdk/table';
 
+import 'hammerjs';
+
 // Import layouts
 import {
   FullLayoutComponent,
@@ -56,8 +58,17 @@ import {
   MatStepperModule, MatFormFieldModule
 } from '@angular/material';
 
+//_services
+import {
+  AuthService
+  , NotificationService
+} from './_services/index';
+
 //routing
 import { AppRoutingModule } from './app.routing';
+
+//gaurds
+import { AuthGuard } from './_guard/auth.guard';
 
 @NgModule({
   imports: [
@@ -128,7 +139,7 @@ import { AppRoutingModule } from './app.routing';
     HttpModule, 
     MatFormFieldModule,
   ],
-  providers: [
+  providers: [AuthService,AuthGuard,NotificationService,
     { provide: LocationStrategy, useClass: HashLocationStrategy },
   ],
   bootstrap: [AppComponent]
