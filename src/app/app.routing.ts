@@ -12,12 +12,12 @@ import {
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'dashboard',
+        redirectTo: 'main',
         pathMatch: 'full',
     },
     {
-        path: '',
-        component: FullLayoutComponent, canActivateChild: [AuthGuard], canActivate: [AuthGuard],
+        path: 'main',
+        component: FullLayoutComponent, canActivate: [AuthGuard],
         data: {
             title: 'Home'
         },
