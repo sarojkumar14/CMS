@@ -12,7 +12,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 
 import 'hammerjs';
 
-// Import layouts
+// Import layouts test
 import {
   FullLayoutComponent,
   SimpleLayoutComponent
